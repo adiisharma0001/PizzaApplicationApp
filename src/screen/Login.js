@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, json, useNavigate } from 'react-router-dom'
 
 export default function Login() {
   const [credentials, setcredentials] = useState({ email: "", password: "" })
@@ -15,7 +15,7 @@ export default function Login() {
       body: JSON.stringify({ email: credentials.email, password: credentials.password })
     })
 
-    console.log("sucessfully done!")
+    console.log(json)
 
     // const json = await response.json()
     // .then((data)=>{console.log("hell yeah")})
@@ -23,7 +23,9 @@ export default function Login() {
     // if (!json.success) {
     //   alert("Enter Valid Credentials")
     // }
-    // if (!json.success) {
+    // if (json.success) {
+    //   localStorage.setItem("authToken" , json.authToken);
+    //   console.log(localStorage.getItem("authToken"))
     //   navigate("/")
     // }
 
@@ -37,6 +39,7 @@ export default function Login() {
   }
   return (
     <div>
+      
       <div className='container'>
         <form onSubmit={handleSubmit}>
 

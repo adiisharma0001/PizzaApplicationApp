@@ -1,11 +1,16 @@
 import React from 'react'
 
-export default function card() {
+export default function card(props) {
+    // let options = props.options;
+    // let priceOptions = Object.keys(options);
+    const handleAddToCart = () => {
+
+    }
     return (
         <div>
             <div>
-                <div className="card mt-3" style={{ "width": "18rem", "maxHeight": "360px"  }}  >
-                    <img src="https://media.istockphoto.com/id/938742222/photo/cheesy-pepperoni-pizza.jpg?s=612x612&w=is&k=20&c=cjrsXpA0waA1Ee50_aVdrY-FCpREkEuf0wkJmm20dAc=" className="card-img-top" alt="..." />
+                <div className="card mt-3 mx-3" style={{ "width": "18rem", "maxHeight": "360px" }}  >
+                    <img src={props.img} className="card-img-top" alt="..." style={{ height: "200px", objectFit: "fill" }} />
                     <div className="card-body">
                         <h5 className="card-title">Card title</h5>
                         <p className="card-text">This is Some Important Text.</p>
@@ -26,9 +31,14 @@ export default function card() {
                                 Total Price
                             </div>
                         </div>
+                        <hr>
+                        </hr>
+                        <button className={'btn btn-seccess justify-center ms-2'} onClick={handleAddToCart}>Add to Cart</button>
                     </div>
                 </div>
             </div>
         </div>
     )
 }
+
+
