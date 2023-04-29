@@ -19,8 +19,8 @@ mongoDB();
 app.use(express.json({
   type: ['application/json']
 }))
+app.use('/apii', require("./Routes/displayData"));
 app.use('/api', require("./Routes/CreatUser"));
-
 
 // app.use(express.urlencoded({ extended: true }))
 app.get('/', (req, res) => {   
