@@ -9,7 +9,7 @@ export default function card(props) {
     return (
         <div>
             <div>
-                <div className="card mt-3 mx-3" style={{ "width": "18rem", "maxHeight": "360px" }}  >
+                <div className="card mt-3 mx-3" style={{ "width": "18rem", "maxHeight": "420px" }}  >
                     <img src={props.img} className="card-img-top" alt="..." style={{ height: "200px", objectFit: "fill" }} />
                     <div className="card-body">
                         <h5 className="card-title">Card title</h5>
@@ -33,7 +33,7 @@ export default function card(props) {
                         </div>
                         <hr>
                         </hr>
-                        <button className={'btn btn-seccess justify-center ms-2'} onClick={handleAddToCart}>Add to Cart</button>
+                        <button className={'btn btn-seccess justify-center ms-2  bg-success rounded'} onClick={handleAddToCart}>Add to Cart</button>
                     </div>
                 </div>
             </div>
